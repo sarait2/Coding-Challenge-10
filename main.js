@@ -26,4 +26,13 @@ sizeDropdown.addEventListener('change', () => {
     }
 });
 
+// Task 4 - Create a Checkout Event 
+purchaseButton.addEventListener('click', () => {
+    const selected = sizeDropdown.options[sizeDropdown.selectedIndex];
+    if (selected.dataset.stock === 'out') {
+        alert('This product is out of stock.');
+    } else {
+        alert(`Thank you for purchasing the ${selected.text.split(' - ')[0]} size!`);
+    }
+});
 
